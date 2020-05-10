@@ -16,7 +16,7 @@ sys.setdefaultencoding('UTF-8')
 def random_film_a1g1():
     oldf = None
     try:
-        oldf = io.open('eline/funny-表格 1.csv', 'r',encoding='UTF-8')
+        oldf = io.open('/root/eline/funny-表格 1.csv', 'r',encoding='UTF-8')
         ret_idx = random.sample(range(0, 54), 1)[0]
         lines = oldf.readlines()
         return str(lines[ret_idx]).replace(',', '\n')
@@ -27,7 +27,7 @@ def random_film_a1g1():
 def random_film_a1g2():
     oldf = None
     try:
-        oldf = io.open('eline/love-表格 1.csv', 'r',encoding='UTF-8')
+        oldf = io.open('/root/eline/love-表格 1.csv', 'r',encoding='UTF-8')
         ret_idx = random.sample(range(0, 92), 1)[0]
         lines = oldf.readlines()
         return str(lines[ret_idx]).replace(',', '\n')
@@ -38,7 +38,7 @@ def random_film_a1g2():
 def random_film_a1g3():
     oldf = None
     try:
-        oldf = io.open('eline/family-表格 1.csv', 'r',encoding='UTF-8')
+        oldf = io.open('/root/eline/family-表格 1.csv', 'r',encoding='UTF-8')
         ret_idx = random.sample(range(0, 32), 1)[0]
         lines = oldf.readlines()
         return str(lines[ret_idx]).replace(',', '\n')
@@ -49,7 +49,7 @@ def random_film_a1g3():
 def random_film_a1g4():
     oldf = None
     try:
-        oldf = io.open('eline/fanzhui-表格 1.csv', 'r',encoding='UTF-8')
+        oldf = io.open('/root/eline/fanzhui-表格 1.csv', 'r',encoding='UTF-8')
         ret_idx = random.sample(range(0, 25), 1)[0]
         lines = oldf.readlines()
         return str(lines[ret_idx]).replace(',', '\n')
@@ -60,7 +60,7 @@ def random_film_a1g4():
 def random_film_a2g1():
     oldf = None
     try:
-        oldf = io.open('eline/music-表格 1.csv', 'r',encoding='UTF-8')
+        oldf = io.open('/root/eline/music-表格 1.csv', 'r',encoding='UTF-8')
         ret_idx = random.sample(range(0, 6), 1)[0]
         lines = oldf.readlines()
         return str(lines[ret_idx]).replace(',', '\n')
@@ -71,7 +71,7 @@ def random_film_a2g1():
 def random_film_a2g2():
     oldf = None
     try:
-        oldf = io.open('eline/hk-表格 1.csv', 'r',encoding='UTF-8')
+        oldf = io.open('/root/eline/hk-表格 1.csv', 'r',encoding='UTF-8')
         ret_idx = random.sample(range(0, 29), 1)[0]
         lines = oldf.readlines()
         return str(lines[ret_idx]).replace(',', '\n')
@@ -82,7 +82,7 @@ def random_film_a2g2():
 def random_film_a2g3():
     oldf = None
     try:
-        oldf = io.open('eline/guess-表格 1.csv', 'r',encoding='UTF-8')
+        oldf = io.open('/root/eline/guess-表格 1.csv', 'r',encoding='UTF-8')
         ret_idx = random.sample(range(0, 120), 1)[0]
         lines = oldf.readlines()
         return str(lines[ret_idx]).replace(',', '\n')
@@ -93,7 +93,7 @@ def random_film_a2g3():
 def random_film_a3g1():
     oldf = None
     try:
-        oldf = io.open('eline/top250-表格 1.csv', 'r',encoding='UTF-8')
+        oldf = io.open('/root/eline/top250-表格 1.csv', 'r',encoding='UTF-8')
         ret_idx = random.sample(range(0, 207), 1)[0]
         lines = oldf.readlines()
         return str(lines[ret_idx]).replace(',', '\n')
@@ -104,7 +104,7 @@ def random_film_a3g1():
 def random_film_a3g3():
     oldf = None
     try:
-        oldf = io.open('eline/hk-表格 1.csv', 'r',encoding='UTF-8')
+        oldf = io.open('/root/eline/hk-表格 1.csv', 'r',encoding='UTF-8')
         ret_idx = random.sample(range(0, 23), 1)[0]
         lines = oldf.readlines()
         return str(lines[ret_idx]).replace(',', '\n')
@@ -115,7 +115,7 @@ def random_film_a3g3():
 def random_film_a3g4():
     oldf = None
     try:
-        oldf = io.open('eline/nanae-表格 1.csv', 'r',encoding='UTF-8')
+        oldf = io.open('/root/eline/nanae-表格 1.csv', 'r',encoding='UTF-8')
         ret_idx = random.sample(range(0, 23), 1)[0]
         lines = oldf.readlines()
         return str(lines[ret_idx]).replace(',', '\n')
@@ -126,7 +126,7 @@ def random_film_a3g4():
 def random_film_a4g1():
     oldf = None
     try:
-        oldf = io.open('eline/want-表格 1.csv', 'r',encoding='UTF-8')
+        oldf = io.open('/root/eline/want-表格 1.csv', 'r',encoding='UTF-8')
         ret_idx = random.sample(range(0, 37), 1)[0]
         lines = oldf.readlines()
         return str(lines[ret_idx]).replace(',', '\n')
@@ -137,7 +137,7 @@ def random_film_a4g1():
 def random_film_a4g2():
     oldf = None
     try:
-        oldf = io.open('eline/top250-表格 1.csv', 'r',encoding='UTF-8')
+        oldf = io.open('/root/eline/top250-表格 1.csv', 'r',encoding='UTF-8')
         ret_idx = random.sample(range(0, 207), 1)[0]
         lines = oldf.readlines()
         return str(lines[ret_idx]).replace(',', '\n')
@@ -148,7 +148,7 @@ def random_film_a4g2():
 def random_film_a4g3():
     oldf = None
     try:
-        oldf = io.open('eline/star-表格 1.csv', 'r',encoding='UTF-8')
+        oldf = io.open('/root/eline/star-表格 1.csv', 'r',encoding='UTF-8')
         ret_idx = random.sample(range(0, 60), 1)[0]
         lines = oldf.readlines()
         return str(lines[ret_idx]).replace(',', '\n')
@@ -159,7 +159,7 @@ def random_film_a4g3():
 def random_film_a4g4():
     oldf = None
     try:
-        oldf = io.open('eline/new-表格 1.csv', 'r',encoding='UTF-8')
+        oldf = io.open('/root/eline/new-表格 1.csv', 'r',encoding='UTF-8')
         ret_idx = random.sample(range(0, 8), 1)[0]
         lines = oldf.readlines()
         return str(lines[ret_idx]).replace(',', '\n')
@@ -170,7 +170,7 @@ def random_film_a4g4():
 def random_film_a3g2g1():
     oldf = None
     try:
-        oldf = io.open('eline/ostar-表格 1.csv', 'r',encoding='UTF-8')
+        oldf = io.open('/root/eline/ostar-表格 1.csv', 'r',encoding='UTF-8')
         ret_idx = random.sample(range(0, 59), 1)[0]
         lines = oldf.readlines()
         return str(lines[ret_idx]).replace(',', '\n')
@@ -181,7 +181,7 @@ def random_film_a3g2g1():
 def random_film_a3g2g2():
     oldf = None
     try:
-        oldf = io.open('eline/96s-表格 1.csv', 'r',encoding='UTF-8')
+        oldf = io.open('/root/eline/96s-表格 1.csv', 'r',encoding='UTF-8')
         ret_idx = random.sample(range(0, 14), 1)[0]
         lines = oldf.readlines()
         return str(lines[ret_idx]).replace(',', '\n')
@@ -192,7 +192,7 @@ def random_film_a3g2g2():
 def random_film_a3g2g3():
     oldf = None
     try:
-        oldf = io.open('eline/10s-表格 1.csv', 'r',encoding='UTF-8')
+        oldf = io.open('/root/eline/10s-表格 1.csv', 'r',encoding='UTF-8')
         ret_idx = random.sample(range(0,14), 1)[0]
         lines = oldf.readlines()
         return str(lines[ret_idx]).replace(',', '\n')
@@ -218,7 +218,7 @@ Q_A = {
             "1": "描述一下你的状态？",
             "2": "现在是什么时间点？",
             "3": "再提一个要求吧？",
-            "4": "描述一下你的状态？",
+            "4": "我是否标记过？",
         }
     },
     "描述一下你的状态？": {
@@ -379,7 +379,6 @@ def chatting(user, msg):
 
     # msg not match
     return '不是很明白你的意思呢(*╹▽╹*)'
-
 
 class Handle(object):
     
