@@ -379,7 +379,7 @@ def chatting(user, msg):
         return content
 
     # msg not match
-    return '不是很明白你的意思呢~~~(*╹▽╹*)'
+    return '不是很明白你的意思呢~(*╹▽╹*)'
 
 class Handle(object):
     
