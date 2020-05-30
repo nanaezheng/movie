@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-# 
 # filename: handle.py
-<<<<<<< HEAD
-=======
-
->>>>>>> 3d66c5408e2e9309da689d8b6e590a9889584351
 import hashlib
 import reply
 import receive
@@ -11,17 +7,13 @@ import web
 import time
 import random
 import io
-<<<<<<< HEAD
 import csv
-=======
->>>>>>> 3d66c5408e2e9309da689d8b6e590a9889584351
 from random import randint
 
 import sys
 reload(sys)
 sys.setdefaultencoding('UTF-8')
 
-<<<<<<< HEAD
 movie_name = None
 
 MOVIE_STORE = {}
@@ -72,15 +64,6 @@ def random_film_a1g1():
         oldf = io.open('eline/funny-表格 1.csv', 'r',encoding='UTF-8')
         ret_idx = random.sample(range(0, 54), 1)[0]
         lines = oldf.readlines()
-=======
-def random_film_a1g1():
-    oldf = None
-    try:
-        oldf = io.open('/root/eline/funny-表格 1.csv', 'r',encoding='UTF-8')
-        lines = oldf.readlines()
-        filelines=len(lines)
-        ret_idx = random.sample(range(0, filelines), 1)[0]
->>>>>>> 3d66c5408e2e9309da689d8b6e590a9889584351
         return str(lines[ret_idx]).replace(',', '\n')
     finally:
         if oldf:
@@ -89,16 +72,9 @@ def random_film_a1g1():
 def random_film_a1g2():
     oldf = None
     try:
-<<<<<<< HEAD
         oldf = io.open('eline/love-表格 1.csv', 'r',encoding='UTF-8')
         ret_idx = random.sample(range(0, 92), 1)[0]
         lines = oldf.readlines()
-=======
-        oldf = io.open('/root/eline/love-表格 1.csv', 'r',encoding='UTF-8')
-        lines = oldf.readlines()
-        filelines=len(lines)
-        ret_idx = random.sample(range(0, filelines), 1)[0]
->>>>>>> 3d66c5408e2e9309da689d8b6e590a9889584351
         return str(lines[ret_idx]).replace(',', '\n')
     finally:
         if oldf:
@@ -107,16 +83,9 @@ def random_film_a1g2():
 def random_film_a1g3():
     oldf = None
     try:
-<<<<<<< HEAD
         oldf = io.open('eline/family-表格 1.csv', 'r',encoding='UTF-8')
         ret_idx = random.sample(range(0, 32), 1)[0]
         lines = oldf.readlines()
-=======
-        oldf = io.open('/root/eline/family-表格 1.csv', 'r',encoding='UTF-8')
-        lines = oldf.readlines()
-        filelines=len(lines)
-        ret_idx = random.sample(range(0, filelines), 1)[0]
->>>>>>> 3d66c5408e2e9309da689d8b6e590a9889584351
         return str(lines[ret_idx]).replace(',', '\n')
     finally:
         if oldf:
@@ -125,16 +94,9 @@ def random_film_a1g3():
 def random_film_a1g4():
     oldf = None
     try:
-<<<<<<< HEAD
         oldf = io.open('eline/fanzhui-表格 1.csv', 'r',encoding='UTF-8')
         ret_idx = random.sample(range(0, 25), 1)[0]
         lines = oldf.readlines()
-=======
-        oldf = io.open('/root/eline/fanzhui-表格 1.csv', 'r',encoding='UTF-8')
-        lines = oldf.readlines()
-        filelines=len(lines)
-        ret_idx = random.sample(range(0, filelines), 1)[0]
->>>>>>> 3d66c5408e2e9309da689d8b6e590a9889584351
         return str(lines[ret_idx]).replace(',', '\n')
     finally:
         if oldf:
@@ -143,16 +105,9 @@ def random_film_a1g4():
 def random_film_a2g1():
     oldf = None
     try:
-<<<<<<< HEAD
         oldf = io.open('eline/music-表格 1.csv', 'r',encoding='UTF-8')
         ret_idx = random.sample(range(0, 6), 1)[0]
         lines = oldf.readlines()
-=======
-        oldf = io.open('/root/eline/music-表格 1.csv', 'r',encoding='UTF-8')
-        lines = oldf.readlines()
-        filelines=len(lines)
-        ret_idx = random.sample(range(0, filelines), 1)[0]
->>>>>>> 3d66c5408e2e9309da689d8b6e590a9889584351
         return str(lines[ret_idx]).replace(',', '\n')
     finally:
         if oldf:
@@ -161,16 +116,9 @@ def random_film_a2g1():
 def random_film_a2g2():
     oldf = None
     try:
-<<<<<<< HEAD
         oldf = io.open('eline/hk-表格 1.csv', 'r',encoding='UTF-8')
         ret_idx = random.sample(range(0, 29), 1)[0]
         lines = oldf.readlines()
-=======
-        oldf = io.open('/root/eline/hk-表格 1.csv', 'r',encoding='UTF-8')
-        lines = oldf.readlines()
-        filelines=len(lines)
-        ret_idx = random.sample(range(0, filelines), 1)[0]
->>>>>>> 3d66c5408e2e9309da689d8b6e590a9889584351
         return str(lines[ret_idx]).replace(',', '\n')
     finally:
         if oldf:
@@ -179,16 +127,9 @@ def random_film_a2g2():
 def random_film_a2g3():
     oldf = None
     try:
-<<<<<<< HEAD
         oldf = io.open('eline/guess-表格 1.csv', 'r',encoding='UTF-8')
         ret_idx = random.sample(range(0, 120), 1)[0]
         lines = oldf.readlines()
-=======
-        oldf = io.open('/root/eline/guess-表格 1.csv', 'r',encoding='UTF-8')
-        lines = oldf.readlines()
-        filelines=len(lines)
-        ret_idx = random.sample(range(0, filelines), 1)[0]
->>>>>>> 3d66c5408e2e9309da689d8b6e590a9889584351
         return str(lines[ret_idx]).replace(',', '\n')
     finally:
         if oldf:
@@ -197,16 +138,9 @@ def random_film_a2g3():
 def random_film_a3g1():
     oldf = None
     try:
-<<<<<<< HEAD
         oldf = io.open('eline/top250-表格 1.csv', 'r',encoding='UTF-8')
         ret_idx = random.sample(range(0, 207), 1)[0]
         lines = oldf.readlines()
-=======
-        oldf = io.open('/root/eline/top250-表格 1.csv', 'r',encoding='UTF-8')
-        lines = oldf.readlines()
-        filelines=len(lines)
-        ret_idx = random.sample(range(0, filelines), 1)[0]
->>>>>>> 3d66c5408e2e9309da689d8b6e590a9889584351
         return str(lines[ret_idx]).replace(',', '\n')
     finally:
         if oldf:
@@ -215,16 +149,9 @@ def random_film_a3g1():
 def random_film_a3g3():
     oldf = None
     try:
-<<<<<<< HEAD
         oldf = io.open('eline/hk-表格 1.csv', 'r',encoding='UTF-8')
         ret_idx = random.sample(range(0, 23), 1)[0]
         lines = oldf.readlines()
-=======
-        oldf = io.open('/root/eline/hk-表格 1.csv', 'r',encoding='UTF-8')
-        lines = oldf.readlines()
-        filelines=len(lines)
-        ret_idx = random.sample(range(0, filelines), 1)[0]
->>>>>>> 3d66c5408e2e9309da689d8b6e590a9889584351
         return str(lines[ret_idx]).replace(',', '\n')
     finally:
         if oldf:
@@ -233,16 +160,9 @@ def random_film_a3g3():
 def random_film_a3g4():
     oldf = None
     try:
-<<<<<<< HEAD
         oldf = io.open('eline/nanae-表格 1.csv', 'r',encoding='UTF-8')
         ret_idx = random.sample(range(0, 23), 1)[0]
         lines = oldf.readlines()
-=======
-        oldf = io.open('/root/eline/nanae-表格 1.csv', 'r',encoding='UTF-8')
-        lines = oldf.readlines()
-        filelines=len(lines)
-        ret_idx = random.sample(range(0, filelines), 1)[0]
->>>>>>> 3d66c5408e2e9309da689d8b6e590a9889584351
         return str(lines[ret_idx]).replace(',', '\n')
     finally:
         if oldf:
@@ -251,16 +171,9 @@ def random_film_a3g4():
 def random_film_a4g1():
     oldf = None
     try:
-<<<<<<< HEAD
         oldf = io.open('eline/want-表格 1.csv', 'r',encoding='UTF-8')
         ret_idx = random.sample(range(0, 37), 1)[0]
         lines = oldf.readlines()
-=======
-        oldf = io.open('/root/eline/want-表格 1.csv', 'r',encoding='UTF-8')
-        lines = oldf.readlines()
-        filelines=len(lines)
-        ret_idx = random.sample(range(0, filelines), 1)[0]
->>>>>>> 3d66c5408e2e9309da689d8b6e590a9889584351
         return str(lines[ret_idx]).replace(',', '\n')
     finally:
         if oldf:
@@ -269,16 +182,9 @@ def random_film_a4g1():
 def random_film_a4g2():
     oldf = None
     try:
-<<<<<<< HEAD
         oldf = io.open('eline/top250-表格 1.csv', 'r',encoding='UTF-8')
         ret_idx = random.sample(range(0, 207), 1)[0]
         lines = oldf.readlines()
-=======
-        oldf = io.open('/root/eline/top250-表格 1.csv', 'r',encoding='UTF-8')
-        lines = oldf.readlines()
-        filelines=len(lines)
-        ret_idx = random.sample(range(0, filelines), 1)[0]
->>>>>>> 3d66c5408e2e9309da689d8b6e590a9889584351
         return str(lines[ret_idx]).replace(',', '\n')
     finally:
         if oldf:
@@ -287,16 +193,9 @@ def random_film_a4g2():
 def random_film_a4g3():
     oldf = None
     try:
-<<<<<<< HEAD
         oldf = io.open('eline/star-表格 1.csv', 'r',encoding='UTF-8')
         ret_idx = random.sample(range(0, 60), 1)[0]
         lines = oldf.readlines()
-=======
-        oldf = io.open('/root/eline/star-表格 1.csv', 'r',encoding='UTF-8')
-        lines = oldf.readlines()
-        filelines=len(lines)
-        ret_idx = random.sample(range(0, filelines), 1)[0]
->>>>>>> 3d66c5408e2e9309da689d8b6e590a9889584351
         return str(lines[ret_idx]).replace(',', '\n')
     finally:
         if oldf:
@@ -305,16 +204,9 @@ def random_film_a4g3():
 def random_film_a4g4():
     oldf = None
     try:
-<<<<<<< HEAD
         oldf = io.open('eline/new-表格 1.csv', 'r',encoding='UTF-8')
         ret_idx = random.sample(range(0, 8), 1)[0]
         lines = oldf.readlines()
-=======
-        oldf = io.open('/root/eline/new-表格 1.csv', 'r',encoding='UTF-8')
-        lines = oldf.readlines()
-        filelines=len(lines)
-        ret_idx = random.sample(range(0, filelines), 1)[0]
->>>>>>> 3d66c5408e2e9309da689d8b6e590a9889584351
         return str(lines[ret_idx]).replace(',', '\n')
     finally:
         if oldf:
@@ -323,16 +215,9 @@ def random_film_a4g4():
 def random_film_a3g2g1():
     oldf = None
     try:
-<<<<<<< HEAD
         oldf = io.open('eline/ostar-表格 1.csv', 'r',encoding='UTF-8')
         ret_idx = random.sample(range(0, 59), 1)[0]
         lines = oldf.readlines()
-=======
-        oldf = io.open('/root/eline/ostar-表格 1.csv', 'r',encoding='UTF-8')
-        lines = oldf.readlines()
-        filelines=len(lines)
-        ret_idx = random.sample(range(0, filelines), 1)[0]
->>>>>>> 3d66c5408e2e9309da689d8b6e590a9889584351
         return str(lines[ret_idx]).replace(',', '\n')
     finally:
         if oldf:
@@ -341,16 +226,9 @@ def random_film_a3g2g1():
 def random_film_a3g2g2():
     oldf = None
     try:
-<<<<<<< HEAD
         oldf = io.open('eline/96s-表格 1.csv', 'r',encoding='UTF-8')
         ret_idx = random.sample(range(0, 14), 1)[0]
         lines = oldf.readlines()
-=======
-        oldf = io.open('/root/eline/96s-表格 1.csv', 'r',encoding='UTF-8')
-        lines = oldf.readlines()
-        filelines=len(lines)
-        ret_idx = random.sample(range(0, filelines), 1)[0]
->>>>>>> 3d66c5408e2e9309da689d8b6e590a9889584351
         return str(lines[ret_idx]).replace(',', '\n')
     finally:
         if oldf:
@@ -359,16 +237,9 @@ def random_film_a3g2g2():
 def random_film_a3g2g3():
     oldf = None
     try:
-<<<<<<< HEAD
         oldf = io.open('eline/10s-表格 1.csv', 'r',encoding='UTF-8')
         ret_idx = random.sample(range(0,14), 1)[0]
         lines = oldf.readlines()
-=======
-        oldf = io.open('/root/eline/10s-表格 1.csv', 'r',encoding='UTF-8')
-        lines = oldf.readlines()
-        filelines=len(lines)
-        ret_idx = random.sample(range(0, filelines), 1)[0]
->>>>>>> 3d66c5408e2e9309da689d8b6e590a9889584351
         return str(lines[ret_idx]).replace(',', '\n')
     finally:
         if oldf:
@@ -385,23 +256,13 @@ Q_A = {
         "option": [
             "1. 纯粹为了放松",
             "2. 碎片时间消磨",
-<<<<<<< HEAD
             "3. 我要看电影",
 
-=======
-            "3. 享受电影乐趣",
-            "4. 打卡完成任务",
->>>>>>> 3d66c5408e2e9309da689d8b6e590a9889584351
         ],
         "answer": {
             "1": "描述一下你的状态？",
             "2": "现在是什么时间点？",
-<<<<<<< HEAD
             "3": "你要看什么电影？",
-=======
-            "3": "再提一个要求吧？",
-            "4": "我是否标记过？",
->>>>>>> 3d66c5408e2e9309da689d8b6e590a9889584351
         }
     },
     "描述一下你的状态？": {
@@ -430,7 +291,6 @@ Q_A = {
             "3": random_film_a2g3,
         }
     },
-<<<<<<< HEAD
     "你要看什么电影？": {
         "option": [
             "告诉我" ,
@@ -438,20 +298,6 @@ Q_A = {
         ],
         "answer": {
             movie_name : find_movie(movie_name),
-=======
-    "再提一个要求吧？": {
-        "option": [
-            "1. 豆瓣评分高",
-            "2. 得奖的作品",
-            "3. 高分华语片",
-            "4. 和Nanae一起看",
-        ],
-        "answer": {
-            "1": random_film_a3g1,
-            "2": "关于电影年份？",
-            "3": random_film_a3g3,
-            "4": random_film_a3g4,
->>>>>>> 3d66c5408e2e9309da689d8b6e590a9889584351
         }
     },
     "关于电影年份？": {
@@ -571,12 +417,8 @@ def chatting(user, msg):
         return content
 
     # msg not match
-<<<<<<< HEAD
     return '不是很明白你的意思呢(*╹▽╹*)'
 
-=======
-    return '不是很明白你的意思呢~(*╹▽╹*)'
->>>>>>> 3d66c5408e2e9309da689d8b6e590a9889584351
 
 class Handle(object):
     
