@@ -17,8 +17,8 @@ sys.setdefaultencoding('UTF-8')
 MOVIE_STORE = {}
 MOVIE_QA_STORE = {}
 
-MSG_TPL = '电影标题：{movie_name}\n获取链接：<a href="{rs_link}">点我</a>\n提取码：{keyword}'
-MSG_QA_TPL = 'Nanae为你精心推荐\n--------------------------\n电影标题：「{uu}」\n豆瓣评分：{uu_rating}\n获取链接：<a href="{uu_link}">点我</a>\n提取码：{uu_keyword}\n--------------------------\n重新选择请回复：T'
+MSG_TPL = '电影标题：「{movie_name}」\n获取链接：<a href="{rs_link}">👉点我👈</a>\n㊙️提取码：{keyword}'
+MSG_QA_TPL = '🎬Nanae为你精心推荐\n--------------------------\n电影标题：「{uu}」\n豆瓣评分：{uu_rating}\n获取链接：<a href="{uu_link}">👉点我👈</a>\n㊙️提取码：{uu_keyword}\n--------------------------\n重新选择请回复：T'
 
 CSV_FILEPATH = '/root/mo.csv'
 
@@ -43,7 +43,7 @@ def find_movie(movie_name):
 
     if movie_name in MOVIE_STORE:
         rs_link, keyword = MOVIE_STORE[movie_name]
-        return True, 'Nanae帮你找到\n--------------------------\n' + MSG_TPL.format(movie_name=movie_name, rs_link=rs_link, keyword=keyword) + '\n--------------------------\n资源有误，请→<a href="https://nanae.jaward.cn/wechat.html">疯狂戳我</a>'
+        return True, '💡Nanae帮你找到\n--------------------------\n' + MSG_TPL.format(movie_name=movie_name, rs_link=rs_link, keyword=keyword) + '\n--------------------------\n资源有误，请→<a href="https://nanae.jaward.cn/wechat.html">疯狂戳我</a> \n⚠️ 由于版权原因，只供百度云网盘资源\n版权均属于影片公司所有，切勿用于商业用途。 '
 
     fuzzy_buff = []
     for store_name, info in MOVIE_STORE.items():
@@ -53,9 +53,9 @@ def find_movie(movie_name):
         fuzzy_buff.append(MSG_TPL.format(movie_name=store_name, rs_link=rs_link, keyword=keyword))
 
     if fuzzy_buff:
-        return True, 'Nanae帮你找到\n--------------------------\n' + '\n\n'.join(fuzzy_buff) + '\n--------------------------\n资源有误，请→<a href="https://nanae.jaward.cn/wechat.html">疯狂戳我</a>'
+        return True, '💡Nanae帮你找到\n--------------------------\n' + '\n\n'.join(fuzzy_buff) + '\n--------------------------\n资源有误，请 <a href="https://nanae.jaward.cn/wechat.html">疯狂戳我</a> \n⚠️ 由于版权原因，只供百度云网盘资源\n版权均属于影片公司所有，切勿用于商业用途。'
 
-    return False, '请息怒，你寻找的影片没有找到，请检查片名是否输入准确，有无错别字，或微信联系：nanaezheng'
+    return False, '请息怒，你寻找的影片暂时未能找到\n\n你可以：\n① 检查片名是否输入准确\n② 使用关键词模糊查找 \n③ 👉<a href="https://nanae.jaward.cn/wechat.html">召唤 Nanae</a>👈跟进'
 
 
 def random_film(filepath):
@@ -87,7 +87,7 @@ def random_film(filepath):
 Q_A = {
     "我如何帮到你~【请回复数字】": {
         "option": [
-            "1. 推荐【某类型】电影",
+            "1. 【按类型】选择电影",
             "2. 【个性化】推荐电影",
             "3. 【电影名】寻找资源",
         ],
@@ -100,14 +100,16 @@ Q_A = {
     },
     "Elaine跟谁看呀？": {
         "option": [
-            "1. 自己看",
-            "2. 跟Nanae看",
+            "1. 自己一个人看",
+            "2. Nanae陪我看",
             "3. 跟朋友看",
+            "4. 听天由命の超级大随机",
         ],
         "answer": {
             "1": "file:/root/eline/for_elaine-表格 1.csv",
             "2": "file:/root/eline/with_nanae-表格 1.csv",
             "3": "file:/root/eline/with_friend-表格 1.csv",
+            "4": "file:/root/eline/all-表格 1.csv",
         }
     },
     "跟谁一起看电影？": {
@@ -178,7 +180,7 @@ Q_A = {
         "option": [
             "1. 上映「年份」",
             "2. 所用「语言」",
-            "3. 具体「类型」",
+            "3. 电影「类型」",
         ],
         "answer": {
             "1": "你希望的电影年份是？",
@@ -189,7 +191,7 @@ Q_A = {
     "你希望的电影年份是？": {
         "option": [
             "1. 半年内新片",
-            "2. 最近两年的电影",
+            "2. 最近三年的电影",
             "3. 2010年后的电影",
             "4. 2000年后的电影",
         ],
@@ -205,7 +207,7 @@ Q_A = {
             "1. 华语电影",
             "2. 英语电影",
             "3. 小语种电影",
-            "4. 日语/韩语电影",
+            "4. 韩语/日语电影",
         ],
         "answer": {
             "1": "file:/root/eline/random_film_language_Chinese-表格 1.csv",
@@ -304,7 +306,7 @@ def chatting(user, msg):
 
     # msg unknown
     if not last_context and '咚咚咚' not in msg:
-        return '不是很明白你的意思呢(*╹▽╹*)'
+        return '😝不是很明白你的意思呢(*╹▽╹*)'
     
     # first enter room and wanna chatting
     if not last_context and '咚咚咚' in msg:
@@ -335,7 +337,7 @@ def chatting(user, msg):
         return content
 
     # msg not match
-    return '不是很明白你的意思呢(*╹▽╹*)'
+    return '😝不是很明白你的意思呢(*╹▽╹*)'
 
 class Handle(object):
     
