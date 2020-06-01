@@ -14,13 +14,12 @@ import sys
 reload(sys)
 sys.setdefaultencoding('UTF-8')
 
-movie_name = None
 
 MOVIE_STORE = {}
 
-MSG_TPL = '电影标题：{movie_name}\n链接：<a href="{rs_link}">提取地址</a>\n提取码：{keyword}'
+MSG_TPL = '电影名：{movie_name}\n获取地址：<a href="{rs_link}">点我</a>\n提取码：{keyword}'
 
-CSV_FILEPATH = 'mo.csv'
+CSV_FILEPATH = '/root/mo.csv'
 
 
 def load_csv():
@@ -55,13 +54,13 @@ def find_movie(movie_name):
     if fuzzy_buff:
         return '\n\n'.join(fuzzy_buff)
 
-    return '没有这个电影'
+    return '暂时没有这个电影，请微信联系:nanaezheng'
 
 
 def random_film_a1g1():
     oldf = None
     try:
-        oldf = io.open('eline/funny-表格 1.csv', 'r',encoding='UTF-8')
+        oldf = io.open('/root/eline/funny-表格 1.csv', 'r',encoding='UTF-8')
         ret_idx = random.sample(range(0, 54), 1)[0]
         lines = oldf.readlines()
         return str(lines[ret_idx]).replace(',', '\n')
@@ -72,7 +71,7 @@ def random_film_a1g1():
 def random_film_a1g2():
     oldf = None
     try:
-        oldf = io.open('eline/love-表格 1.csv', 'r',encoding='UTF-8')
+        oldf = io.open('/root/eline/love-表格 1.csv', 'r',encoding='UTF-8')
         ret_idx = random.sample(range(0, 92), 1)[0]
         lines = oldf.readlines()
         return str(lines[ret_idx]).replace(',', '\n')
@@ -83,7 +82,7 @@ def random_film_a1g2():
 def random_film_a1g3():
     oldf = None
     try:
-        oldf = io.open('eline/family-表格 1.csv', 'r',encoding='UTF-8')
+        oldf = io.open('/root/eline/family-表格 1.csv', 'r',encoding='UTF-8')
         ret_idx = random.sample(range(0, 32), 1)[0]
         lines = oldf.readlines()
         return str(lines[ret_idx]).replace(',', '\n')
@@ -94,7 +93,7 @@ def random_film_a1g3():
 def random_film_a1g4():
     oldf = None
     try:
-        oldf = io.open('eline/fanzhui-表格 1.csv', 'r',encoding='UTF-8')
+        oldf = io.open('/root/eline/fanzhui-表格 1.csv', 'r',encoding='UTF-8')
         ret_idx = random.sample(range(0, 25), 1)[0]
         lines = oldf.readlines()
         return str(lines[ret_idx]).replace(',', '\n')
@@ -105,7 +104,7 @@ def random_film_a1g4():
 def random_film_a2g1():
     oldf = None
     try:
-        oldf = io.open('eline/music-表格 1.csv', 'r',encoding='UTF-8')
+        oldf = io.open('/root/eline/music-表格 1.csv', 'r',encoding='UTF-8')
         ret_idx = random.sample(range(0, 6), 1)[0]
         lines = oldf.readlines()
         return str(lines[ret_idx]).replace(',', '\n')
@@ -116,7 +115,7 @@ def random_film_a2g1():
 def random_film_a2g2():
     oldf = None
     try:
-        oldf = io.open('eline/hk-表格 1.csv', 'r',encoding='UTF-8')
+        oldf = io.open('/root/eline/hk-表格 1.csv', 'r',encoding='UTF-8')
         ret_idx = random.sample(range(0, 29), 1)[0]
         lines = oldf.readlines()
         return str(lines[ret_idx]).replace(',', '\n')
@@ -127,7 +126,7 @@ def random_film_a2g2():
 def random_film_a2g3():
     oldf = None
     try:
-        oldf = io.open('eline/guess-表格 1.csv', 'r',encoding='UTF-8')
+        oldf = io.open('/root/eline/guess-表格 1.csv', 'r',encoding='UTF-8')
         ret_idx = random.sample(range(0, 120), 1)[0]
         lines = oldf.readlines()
         return str(lines[ret_idx]).replace(',', '\n')
@@ -138,7 +137,7 @@ def random_film_a2g3():
 def random_film_a3g1():
     oldf = None
     try:
-        oldf = io.open('eline/top250-表格 1.csv', 'r',encoding='UTF-8')
+        oldf = io.open('/root/eline/top250-表格 1.csv', 'r',encoding='UTF-8')
         ret_idx = random.sample(range(0, 207), 1)[0]
         lines = oldf.readlines()
         return str(lines[ret_idx]).replace(',', '\n')
@@ -149,7 +148,7 @@ def random_film_a3g1():
 def random_film_a3g3():
     oldf = None
     try:
-        oldf = io.open('eline/hk-表格 1.csv', 'r',encoding='UTF-8')
+        oldf = io.open('/root/eline/hk-表格 1.csv', 'r',encoding='UTF-8')
         ret_idx = random.sample(range(0, 23), 1)[0]
         lines = oldf.readlines()
         return str(lines[ret_idx]).replace(',', '\n')
@@ -160,7 +159,7 @@ def random_film_a3g3():
 def random_film_a3g4():
     oldf = None
     try:
-        oldf = io.open('eline/nanae-表格 1.csv', 'r',encoding='UTF-8')
+        oldf = io.open('/root/eline/nanae-表格 1.csv', 'r',encoding='UTF-8')
         ret_idx = random.sample(range(0, 23), 1)[0]
         lines = oldf.readlines()
         return str(lines[ret_idx]).replace(',', '\n')
@@ -171,7 +170,7 @@ def random_film_a3g4():
 def random_film_a4g1():
     oldf = None
     try:
-        oldf = io.open('eline/want-表格 1.csv', 'r',encoding='UTF-8')
+        oldf = io.open('/root/eline/want-表格 1.csv', 'r',encoding='UTF-8')
         ret_idx = random.sample(range(0, 37), 1)[0]
         lines = oldf.readlines()
         return str(lines[ret_idx]).replace(',', '\n')
@@ -182,7 +181,7 @@ def random_film_a4g1():
 def random_film_a4g2():
     oldf = None
     try:
-        oldf = io.open('eline/top250-表格 1.csv', 'r',encoding='UTF-8')
+        oldf = io.open('/root/eline/top250-表格 1.csv', 'r',encoding='UTF-8')
         ret_idx = random.sample(range(0, 207), 1)[0]
         lines = oldf.readlines()
         return str(lines[ret_idx]).replace(',', '\n')
@@ -193,7 +192,7 @@ def random_film_a4g2():
 def random_film_a4g3():
     oldf = None
     try:
-        oldf = io.open('eline/star-表格 1.csv', 'r',encoding='UTF-8')
+        oldf = io.open('/root/eline/star-表格 1.csv', 'r',encoding='UTF-8')
         ret_idx = random.sample(range(0, 60), 1)[0]
         lines = oldf.readlines()
         return str(lines[ret_idx]).replace(',', '\n')
@@ -204,7 +203,7 @@ def random_film_a4g3():
 def random_film_a4g4():
     oldf = None
     try:
-        oldf = io.open('eline/new-表格 1.csv', 'r',encoding='UTF-8')
+        oldf = io.open('/root/eline/new-表格 1.csv', 'r',encoding='UTF-8')
         ret_idx = random.sample(range(0, 8), 1)[0]
         lines = oldf.readlines()
         return str(lines[ret_idx]).replace(',', '\n')
@@ -215,7 +214,7 @@ def random_film_a4g4():
 def random_film_a3g2g1():
     oldf = None
     try:
-        oldf = io.open('eline/ostar-表格 1.csv', 'r',encoding='UTF-8')
+        oldf = io.open('/root/eline/ostar-表格 1.csv', 'r',encoding='UTF-8')
         ret_idx = random.sample(range(0, 59), 1)[0]
         lines = oldf.readlines()
         return str(lines[ret_idx]).replace(',', '\n')
@@ -226,7 +225,7 @@ def random_film_a3g2g1():
 def random_film_a3g2g2():
     oldf = None
     try:
-        oldf = io.open('eline/96s-表格 1.csv', 'r',encoding='UTF-8')
+        oldf = io.open('/root/eline/96s-表格 1.csv', 'r',encoding='UTF-8')
         ret_idx = random.sample(range(0, 14), 1)[0]
         lines = oldf.readlines()
         return str(lines[ret_idx]).replace(',', '\n')
@@ -237,7 +236,7 @@ def random_film_a3g2g2():
 def random_film_a3g2g3():
     oldf = None
     try:
-        oldf = io.open('eline/10s-表格 1.csv', 'r',encoding='UTF-8')
+        oldf = io.open('/root/eline/10s-表格 1.csv', 'r',encoding='UTF-8')
         ret_idx = random.sample(range(0,14), 1)[0]
         lines = oldf.readlines()
         return str(lines[ret_idx]).replace(',', '\n')
@@ -245,24 +244,16 @@ def random_film_a3g2g3():
         if oldf:
             oldf.close()
 
-CHAT_USR = {
-    "oIiOM5cKpZgS_lAuHi50iTzb38o0": "jawardwu",
-    "oQcgquAZLxops9dpqwQGxdJFjsoY": "nanaezheng",
-    "oIiOM5cKpZgS_lAuHi50iTzb38o0": "elaine",
-}
-
 Q_A = {
-    "以下哪句话最接近你的目的？": {
+    "开门~找我干什么呀？": {
         "option": [
-            "1. 纯粹为了放松",
-            "2. 碎片时间消磨",
-            "3. 我要看电影",
+            "1. 推荐电影",
+            "2. 找资源",
 
         ],
         "answer": {
             "1": "描述一下你的状态？",
-            "2": "现在是什么时间点？",
-            "3": "你要看什么电影？",
+            "2": "告诉我电影名字吧~",
         }
     },
     "描述一下你的状态？": {
@@ -274,9 +265,9 @@ Q_A = {
         ],
         "answer": {
             "1": random_film_a1g1,
-            "2": random_film_a1g2,
+            "2": "我是否标记过？",
             "3": random_film_a1g3,
-            "4": random_film_a1g4,
+            "4": "关于电影年份？",
         }
     },
     "现在是什么时间点？": {
@@ -289,15 +280,6 @@ Q_A = {
             "1": random_film_a2g1,
             "2": random_film_a2g2,
             "3": random_film_a2g3,
-        }
-    },
-    "你要看什么电影？": {
-        "option": [
-            "告诉我" ,
- 
-        ],
-        "answer": {
-            movie_name : find_movie(movie_name),
         }
     },
     "关于电影年份？": {
@@ -385,14 +367,20 @@ class ImageMsg(Msg):
 def chatting(user, msg):
     # query user last context
     last_context = CONTENT_CACHE[user] if user in CONTENT_CACHE else ''
+    # movie
+    if last_context == '告诉我电影名字吧~':
+        content = find_movie(msg)
+        del CONTENT_CACHE[user]
+        return content
 
     # msg unknown
+
     if not last_context and '咚咚咚' not in msg:
-        return '不是很明白你的意思呢(*╹▽╹*)'
+        return find_movie(msg)
     
     # first enter room and wanna chatting
     if not last_context and '咚咚咚' in msg:
-        content = "以下哪句话最接近你的目的？"
+        content = "开门~找我干什么呀？"
         CONTENT_CACHE[user] = content
         content += '\n' + '\n'.join(Q_A[content]['option'])  
         return content
@@ -417,7 +405,7 @@ def chatting(user, msg):
         return content
 
     # msg not match
-    return '不是很明白你的意思呢(*╹▽╹*)'
+    return find_movie(msg)
 
 
 class Handle(object):
@@ -429,10 +417,6 @@ class Handle(object):
         toUser = recMsg.FromUserName
         fromUser = recMsg.ToUserName
         formReceive = recMsg.Content
-
-#        if toUser not in CHAT_USR:
-#            replyMsg = reply.TextMsg(toUser, fromUser, '你不是心上人')
-#            return replyMsg.send()
 
         content = chatting(toUser, formReceive)
         replyMsg = reply.TextMsg(toUser, fromUser, content)
