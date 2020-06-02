@@ -22,7 +22,6 @@ MSG_QA_TPL = '🎬Nanae为你精心推荐\n--------------------------\n电影标
 
 CSV_FILEPATH = '/root/mo.csv'
 
-
 def load_csv():
     with open(CSV_FILEPATH, 'r') as fp:
         for line in fp.readlines():
@@ -36,14 +35,13 @@ def load_csv():
             MOVIE_STORE[title] = (rs_link, keyword)
     fp.close()
 
-
 def find_movie(movie_name):
     if not MOVIE_STORE:
         load_csv()
 
     if movie_name in MOVIE_STORE:
         rs_link, keyword = MOVIE_STORE[movie_name]
-        return True, '💡Nanae帮你找到\n--------------------------\n' + MSG_TPL.format(movie_name=movie_name, rs_link=rs_link, keyword=keyword) + '\n--------------------------\n资源有误，请→<a href="https://nanae.jaward.cn/wechat.html">疯狂戳我</a> \n⚠️ 由于版权原因，只供百度云网盘资源\n版权均属于影片公司所有，切勿用于商业用途。 '
+        return True, '💡Nanae帮你找到\n--------------------------\n' + MSG_TPL.format(movie_name=movie_name, rs_link=rs_link, keyword=keyword) + '\n--------------------------\n资源有误，请→<a href="https://nanae.jaward.cn/wechat.html">疯狂戳我</a> \n⚠️ 由于版权原因，只供百度云网盘资源\n⚠️ 版权均属于影片公司所有，切勿用于商业用途。 '
 
     fuzzy_buff = []
     for store_name, info in MOVIE_STORE.items():
@@ -53,9 +51,9 @@ def find_movie(movie_name):
         fuzzy_buff.append(MSG_TPL.format(movie_name=store_name, rs_link=rs_link, keyword=keyword))
 
     if fuzzy_buff:
-        return True, '💡Nanae帮你找到\n--------------------------\n' + '\n\n'.join(fuzzy_buff) + '\n--------------------------\n资源有误，请 <a href="https://nanae.jaward.cn/wechat.html">疯狂戳我</a> \n⚠️ 由于版权原因，只供百度云网盘资源\n版权均属于影片公司所有，切勿用于商业用途。'
+        return True, '💡Nanae猜你想找\n--------------------------\n' + '\n\n'.join(fuzzy_buff) + '\n--------------------------\n资源有误，请 <a href="https://nanae.jaward.cn/wechat.html">疯狂戳我</a> \n⚠️ 由于版权原因，只供百度云网盘资源\n⚠️ 版权均属于影片公司所有，切勿用于商业用途。'
 
-    return False, '请息怒，你寻找的影片暂时未能找到\n\n你可以：\n① 检查片名是否输入准确\n② 使用关键词模糊查找 \n③ 👉<a href="https://nanae.jaward.cn/wechat.html">召唤 Nanae</a>👈跟进'
+    return False, '请息怒，你寻找的影片暂时未能找到\n\n你可以：\n① 检查片名是否准确，重新输入\n② 使用片名中关键词，模糊查找 \n③ 👉<a href="https://nanae.jaward.cn/wechat.html">召唤 Nanae</a>👈 尽快跟进\n④ 回复 T 重新选择电影'
 
 
 def random_film(filepath):
@@ -303,7 +301,7 @@ def chatting(user, msg):
         CONTENT_CACHE[user] = content
         content += '\n' + '\n'.join(Q_A[content]['option'])  
         return content
-
+        
     # msg unknown
     if not last_context and '咚咚咚' not in msg:
         return '😝不是很明白你的意思呢(*╹▽╹*)'
